@@ -40,7 +40,7 @@ var IonicDeeplink = {
       console.log('On deep link', data);
       var realPath, pathData, matchedParams, args, finalArgs, didRoute;
 
-      realPath = self._getRealPath(data);
+      realPath = data.path;
       args = self._queryToObject(data.url)
 
       for(var targetPath in paths) {
@@ -120,10 +120,11 @@ var IonicDeeplink = {
     // This is used for things like /post/:id
     var routeParams = {};
 
-    if(parts.length !== routeParts.length) {
+    // if(parts.length !== routeParts.length) {
       // Can't possibly match if the lengths are different
-      return false;
-    }
+      // return false;
+    // }
+    
 
     // Otherwise, we need to check each part
 
