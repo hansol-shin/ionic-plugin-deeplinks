@@ -120,10 +120,10 @@ var IonicDeeplink = {
     // This is used for things like /post/:id
     var routeParams = {};
 
-    // if(parts.length !== routeParts.length) {
+    if(parts.length !== routeParts.length) {
       // Can't possibly match if the lengths are different
-      // return false;
-    // }
+      return false;
+    }
     
 
     // Otherwise, we need to check each part
